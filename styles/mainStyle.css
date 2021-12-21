@@ -1,0 +1,24 @@
+body, html{
+    position: relative;
+    height: 100%;
+    min-height: 100vh
+}
+
+h3{
+    padding-top: 60px; 
+}
+.affix {
+    top: 20px;
+  }
+
+.sticky-offset {
+    top: 60px;
+}
+.scrollspy-example {
+    position: relative;
+    height: auto;
+    overflow: auto;
+}
+.disable-color-nav{
+    color: #9D9D9D;
+}
