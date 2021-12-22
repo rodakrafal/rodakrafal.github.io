@@ -18,7 +18,7 @@
        
     
 </head>
-<body data-spy="scroll" data-target="#scrollspy1">
+<body data-spy="scroll" data-target="#scrollspy1" data-offset="65">
 
     <header>
 		<!-- Navbar -->
@@ -107,11 +107,7 @@
         <div class="col-md-10">
           <!-- Spied element -->
           <div
-            data-mdb-spy="scroll"
-            data-mdb-target="#scrollspy1"
-            data-mdb-offset="0"
             class="scrollspy-example"
-            tabindex="0"
           >
             <div class="container-fluid">
               <section id="podsumowanie">
@@ -131,7 +127,7 @@
                 </div>
 
                   <div class="container">  
-                    <div class="table-responsive" id="podsumowanie-tabela">
+                    <div class="table-responsive add-margin" id="podsumowanie-tabela">
                       <table class="table table-hover table-sm">
                         <thead class = "table-dark">
                           <tr>
@@ -479,11 +475,11 @@
                   </div>
 
                   
-                <div class="container col-md-10 add-big-margin" id="wykres-wiadomosc-doughnut">
+                <div class="container col-md-10 add-margin" id="wykres-wiadomosc-doughnut">
                   <h4> Wykres proporcji napisanych wiadomości w porównaniu do wszystkich uczestników </h4>
                   <canvas id="myChart" ></canvas>      
                 </div>
-                <div class="container col-md-10 add-big-margin" id="wykres-wiadomosc-chart-logarytmiczny">
+                <div class="container col-md-10 add-margin" id="wykres-wiadomosc-chart-logarytmiczny">
                   <h4> Wykres logarytniczny napisanych wiadomości </h4>
                   <canvas id="myChart2"></canvas>      
                 </div>
@@ -605,7 +601,7 @@
       
         <div class="col-md-2 ">
           <!-- Scrollspy -->
-          <div id="scrollspy1" class="sticky-top flex-column sticky-offset" index>
+          <div id="scrollspy1" class="sticky-top sticky-offset" index>
             <ul class="nav flex-column nav-pills menu-sidebar" >
 
               <li class="nav-item">
@@ -707,14 +703,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <script>
+    var divId;
 
-
-  $('.nav-link').click(function(){    
-    divId = $(this).attr('href');
-     $('html, body').animate({
-      scrollTop: $(divId).offset().top - 60
-    }, 100);
-  });
+    $('.nav-link').click(function(){    
+      divId = $(this).attr('href');
+      $('html, body').animate({
+        scrollTop: $(divId).offset().top - 60
+      }, 100);
+    });
+    
   </script>
 
 
