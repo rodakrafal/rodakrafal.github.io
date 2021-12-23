@@ -188,15 +188,21 @@ let mychart3 = new Chart(emojisBarChart, {
           },
         },
         responsive: true,
-    scales: {
-        xAxes: [{
-            stacked: true // this should be set to make the bars stacked
-        }],
-        yAxes: [{
-            
-            stacked: true // this also..
-        }]
-        }
+        hover: {
+            onHover: function(e) {
+            var point = this.getElementAtEvent(e);
+            e.target.style.cursor = point.length ? 'pointer' : 'default';
+            },
+        },
+        scales: {
+            xAxes: [{
+                stacked: true // this should be set to make the bars stacked
+            }],
+            yAxes: [{
+                
+                stacked: true // this also..
+            }]
+            }
       }    
 });
 
