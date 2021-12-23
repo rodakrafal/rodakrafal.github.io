@@ -25,7 +25,7 @@ let namesMessangesCountChart = ['Andrzej Domagała',
 'Jakub Bieniek',
 'Kuba Baryłka',
 'Mateusz Świderski',
-'Eliza Szczotka',];
+'Eliza Szczotka'];
 
 let messagesAmoutChart = [4207,
     2696,
@@ -42,6 +42,7 @@ let messagesAmoutChart = [4207,
     113,
     86,
     58,
+    50,
     39,
     34,
     33,
@@ -57,8 +58,8 @@ let messagesAmoutChart = [4207,
 // const colorScaledataLengthMessangesCountChart = d3.interpolateSinebow;
 const colorScaledataLengthMessangesCountChart = d3.interpolateInferno;
 const colorRangeInfoLengthMessangesCountChart = {
-colorStart: 0,
-colorEnd: 1,
+colorStart: 0.1,
+colorEnd: 0.8,
 useEndAsStart: false,
 };
 
