@@ -11,22 +11,28 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet"/>
-    <!-- Bootstrap -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous"> -->
-    <!-- Own CSS style -->
-    <link rel="stylesheet" href="../styles/mainStyle.css">
-    
-</head>
-<body data-spy="scroll" data-target="#scrollspy1">
+    <!-- Import Chart.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
 
-    <header>
+    <!-- Import D3 Scale Chromatic via CDN -->
+    <script src="https://d3js.org/d3-color.v1.min.js"></script>
+    <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    
+    <script src="../scripts/color-generator.js"></script>
+    
+    <link rel="stylesheet" href="../styles/mainStyle.css">
+</head>
+<body data-spy="scroll" data-target="#scrollspy1" data-offset="65">
+
+  <header>
 		<!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top px-5">
       <!-- Container wrapper -->
       <div class="container-fluid">
     
         <!-- Navbar brand -->
-        <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" class="d-inline-block mr-5 align-bottom" alt="" width="24" height="24"> Wyniki</a>
+        <a class="navbar-brand disable-color-nav" href="../index.html"><img src="../img/logo.png" class="d-inline-block mr-5 align-bottom" alt="" width="24" height="24"> Wyniki</a>
       
         <!-- Toggle button -->
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,11 +45,11 @@
     
             <!-- Link -->
             <li class="nav-item">
-              <a class="nav-link" href="intelektulana.html">Intelektualna</a>
+              <a class="nav-link " href="intelektulana.html" >Intelektualna</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link active" href="sigmawka.html">Sigmawka</a>
+              <a class="nav-link active"  href="sigmawka.html">Sigmawka</a>
             </li>
 
             <li class="nav-item">
@@ -88,7 +94,7 @@
               <a class="nav-link" href="#"><i class="fa fa-code"></i></a>
             </li>
             <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="https://github.com/rodakrafal">
                   <i class="fab fa-github"></i>
               </a>
             </li>
@@ -100,217 +106,444 @@
     </nav>
     <!-- Navbar -->
     </header>
+    
 
     <div class="container-fluid px-5 h-auto">
       <div class="row">
         <div class="col-md-10">
           <!-- Spied element -->
           <div
-            data-mdb-spy="scroll"
-            data-mdb-target="#scrollspy1"
-            data-mdb-offset="0"
             class="scrollspy-example"
-            tabindex="0"
           >
-            <div class="container-fluid px-0">
-              <section id="example-1">
-                <h3>Section 1</h3>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-  
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
+            <div class="container-fluid">
+              <section id="podsumowanie">
+                <h3>Podsumowanie Ślizgawki</h3>
 
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
+                <div class="container ">                
+                  <section class="p-3">
+                    <div class="container">
+                      <div class="row text-center g-4">
+                        <div class="col-md">
+                          <div class="card bg-dark text-light">
+                            <div class="card-body text-center bg-custom-1">
+                              <div class="h1 mb-3">
+                                <i class="bi bi-laptop"></i>
+                              </div>
+                              <h3 class="card-title mb-3">Założenie</h3>
+                              <p class="card-text">
+                                2021-05-19 19:20:39
+                              </p>
+                              <a href="#" class="btn btn-dark bg-custom-9">Read More</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <div class="card bg-secondary text-light">
+                            <div class="card-body text-center bg-custom-2">
+                              <div class="h1 mb-3">
+                                <i class="bi bi-person-square"></i>
+                              </div>
+                              <h3 class="card-title mb-3">Ilość dni</h3>
+                              <p class="card-text">
+                                206
+                              </p>
+                              <a href="#" class="btn btn-dark bg-custom-8">Read More</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <div class="card bg-dark text-light">
+                            <div class="card-body text-center bg-custom-3">
+                              <div class="h1 mb-3">
+                                <i class="bi bi-people"></i>
+                              </div>
+                              <h3 class="card-title mb-3">Ilość wiadomości</h3>
+                              <p class="card-text">
+                                18 693 
+                              </p>
+                              <a href="#" class="btn btn-dark  bg-custom-7">Read More</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
 
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
+                  <section class="p-3">
+                    <div class="container">
+                      <div class="row text-center g-4">
+                        <div class="col-md">
+                          <div class="card bg-dark text-light">
+                            <div class="card-body text-center bg-custom-4">
+                              <div class="h1 mb-3">
+                                <i class="bi bi-laptop"></i>
+                              </div>
+                              <h3 class="card-title mb-3">Ilość słów</h3>
+                              <p class="card-text">
+                                82 836
+                              </p>
+                              <a href="#" class="btn btn-dark  bg-custom-6">Read More</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <div class="card bg-secondary text-light">
+                            <div class="card-body text-center bg-custom-5">
+                              <div class="h1 mb-3">
+                                <i class="bi bi-person-square"></i>
+                              </div> 
+                              <h3 class="card-title mb-3">Najwięcej wiadomości</h3>
+                              <p class="card-text">
+                                Wyłano w czwartek
+                              </p>
+                              <a href="#" class="btn btn-dark bg-custom-5">Read More</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md"> 
+                          <div class="card bg-dark text-light">
+                            <div class="card-body text-center bg-custom-6">
+                              <div class="h1 mb-3">
+                                <i class="bi bi-people"></i>
+                              </div>
+                              <h4 class="card-title mb-3">Najwięciększa aktywność</h3>
+                              <p class="card-text">
+                                O godzinie 21
+                              </p>
+                              <a href="#" class="btn btn-dark bg-custom-4">Read More</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
 
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
+                  <section class="p-3">
+                    <div class="container">
+                      <div class="row text-center g-4">
+                        <div class="col-md">
+                          <div class="card bg-dark text-light">
+                            <div class="card-body text-center bg-custom-7">
+                              <div class="h1 mb-3">
+                                <i class="bi bi-laptop"></i>
+                              </div>
+                              <h3 class="card-title mb-3">Średnia długość wiadomości</h3>
+                              <p class="card-text">
+                                4.4 słowa
+                              </p>
+                              <a href="#" class="btn btn-dark bg-custom-3">Read More</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <div class="card bg-secondary text-light">
+                            <div class="card-body text-center bg-custom-8">
+                              <div class="h1 mb-3">
+                                <i class="bi bi-person-square"></i>
+                              </div> 
+                              <h3 class="card-title mb-3">Średnia ilość wiadomości na dzień</h3>
+                              <p class="card-text">
+                                90.7
+                              </p>
+                              <a href="#" class="btn btn-dark bg-custom-2">Read More</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md"> 
+                          <div class="card bg-dark text-light">
+                            <div class="card-body text-center bg-custom-9">
+                              <div class="h1 mb-3">
+                                <i class="bi bi-people"></i>
+                              </div>
+                              <h3 class="card-title mb-3">Najwięcej wiadomości w dniu</h3>
+                              <p class="card-text">
+                                693
+                              </p>
+                              <a href="#" class="btn btn-dark bg-custom-1">Read More</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
 
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-  
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
+                </div>
 
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
+                  <div class="container">  
+                    <div class="table-responsive add-margin" id="podsumowanie-tabela">
+                      <table class="table table-hover table-sm">
+                        <thead class = "table-dark">
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Użytkownik</th>
+                            <th scope="col">Ilość wiadomości</th>
+                            <th scope="col">Procentowy udział</th>
+                            <th scope="col">Ulubiona emotka</th>
+                            <th scope="col">Ilość "użyć"</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Andrzej Domagała </td>
+                            <td>9.139</td>
+                            <td>
+                              <span class="text-success">
+                                <i class="fas fa-caret-up me-1"></i><span>49%</span>
+                              </span>                            
+                            </td>
+                            <td>🦽</td>
+                            <td>68</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Andrzej Wiśniewski</td>
+                            <td>2.454</td>
+                            <td>
+                              <span class="text-success">
+                                <i class="fas fa-caret-up me-1"></i><span>13%</span>
+                              </span>                            
+                            </td>
+                            <td>🦽</td>
+                            <td>9</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Mateusz Tchórz</td>
+                            <td>1.479</td>
+                            <td>
+                              <span class="text-success">
+                                <i class="fas fa-caret-up me-1"></i><span>9%</span>
+                              </span>                            
+                            </td>
+                            <td>🤠</td>
+                            <td>5</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Maciej Mikulski</td>
+                            <td>1.287</td>
+                            <td>
+                              <span class="text-success">
+                                <i class="fas fa-caret-up me-1"></i><span>7%</span>
+                              </span>                            
+                            </td>
+                            <td>🦽 </td>
+                            <td>15</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Kuba Baryłka</td>
+                            <td>896</td>
+                            <td>
+                              <span class="text-success">
+                                <i class="fas fa-caret-up me-1"></i><span>5%</span>
+                              </span>                            
+                            </td>
+                            <td>🦽 </td>
+                            <td>5</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Paweł Ostrowski</td>
+                            <td>887</td>
+                            <td>
+                              <span class="text-success">
+                                <i class="fas fa-caret-up me-1"></i><span>4%</span>
+                              </span>                            
+                            </td>
+                            <td>🦽 </td>
+                            <td>29</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>Łukasz Szarga</td>
+                            <td>766</td>
+                            <td>
+                              <span class="text-success">
+                                <i class="fas fa-caret-up me-1"></i><span>4%</span>
+                              </span>                            
+                            </td>
+                            <td>🍄 </td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td>Antek Domagała</td>
+                            <td>518</td>
+                            <td>
+                              <span class="text-success">
+                                <i class="fas fa-caret-up me-1"></i><span>3%</span>
+                              </span>                            
+                            </td>
+                            <td>🍄</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">9</th>
+                            <td>Tomek Wiejak</td>
+                            <td>473</td>
+                            <td>
+                              <span class="text-success">
+                                <i class="fas fa-caret-up me-1"></i><span>3%</span>
+                              </span>                            
+                            </td>
+                            <td>🙏</td>
+                            <td>3</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">10</th>
+                            <td>Krzysztof Oleszkiewicz</td>
+                            <td>466</td>
+                            <td>
+                              <span class="text-success">
+                                <i class="fas fa-caret-up me-1"></i><span>2%</span>
+                              </span>                            
+                            </td>
+                            <td>😔 </td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">11</th>
+                            <td>Rafał Rodak 👑</td>
+                            <td>155</td>
+                            <td>
+                              <span class="text-success">
+                                <i class="fas fa-caret-up me-1"></i><span>1%</span>
+                              </span>                            
+                            </td>
+                            <td>---</td>
+                            <td>---</tr>td>
+                          </tr>
+                          <tr>
+                            <th scope="row">12</th>
+                            <td>Radosław Bany</td>
+                            <td>81</td>
+                            <td>
+                              <span class="text-success">
+                                <i class="fas fa-caret-up me-1"></i><span>0%</span>
+                              </span>                            
+                            </td>
+                            <td>---</td>
+                            <td>---</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">13</th>
+                            <td>Kuba Kryk</td>
+                            <td>64</td>
+                            <td>
+                              <span class="text-success">
+                                <i class="fas fa-caret-up me-1"></i><span>0%</span>
+                              </span>                            
+                            </td>
+                            <td>🦽 </td>
+                            <td>3</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">14</th>
+                            <td>Piotr Rodziewicz</td>
+                            <td>23</td>
+                            <td>
+                              <span class="text-success">
+                                <i class="fas fa-caret-up me-1"></i><span>0%</span>
+                              </span>                            
+                            </td>
+                            <td>🦽</td>
+                            <td> 1</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">15</th>
+                            <td>Kacper Seredyn</td>
+                            <td>3</td>
+                            <td>
+                              <span class="text-success">
+                                <i class="fas fa-caret-up me-1"></i><span>0%</span>
+                              </span>                            
+                            </td>
+                            <td>---</td>
+                            <td>---</td>
+                          </tr>
+                   
+                        <caption>
+                          Podsumowanie aktywności członków
+                        </caption>
+                    
+                      </table>
+                    </div>
+                  </div>
 
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
                   
+                <div class="container col-md-10 add-margin" id="wykres-wiadomosc-doughnut">
+                  <h4> Wykres proporcji napisanych wiadomości w porównaniu do wszystkich uczestników </h4>
+                  <canvas id="myChart" ></canvas>      
+                </div>
+                <div class="container col-md-10 add-margin" id="wykres-wiadomosc-chart-logarytmiczny">
+                  <h4> Wykres logarytniczny napisanych wiadomości </h4>
+                  <canvas id="myChart2"></canvas>      
+                </div>
               </section>
             </div>
-            
+             
             <section id="example-2">
-              <h3>Section 2</h3>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
+              <h3>Ilość wiadomości w dniu</h3>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
   
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
+              <div class="container col-md-10 add-margin" id="wykres-wiadomosc-chart-logarytmiczny">
+                <h4> Rozkład wszystkich wiadomości w trakcie trwania dnia </h4>
+                <canvas id="intelektualnaChartAktywnoscDzien"></canvas>      
+              </div>
             </section>
             <section id="example-3">
-              <h3>Section 3</h3>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
+              <h3>Ilość wiadomości w miesiąciu</h3>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
   
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-            <section id="example-sub-A">
-                <h3>Subsection A</h3>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-  
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-  
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                  
-              </section>
-              <section id="example-sub-B">
-                <h3>Subsection B</h3>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-  
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                  
-              </section>
+              <div class="container col-md-10 add-margin" id="wykres-wiadomosc-chart-logarytmiczny">
+                <h4> Rozkład wszystkich wiadomości w tygodniu </h4>
+                <canvas id="intelektualnaChartAktywnoscTydzien"></canvas>      
+              </div>
+           
             </section>
             <section id="example-4">
               <h3>Section 4</h3>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
   
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-  
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati et reiciendis quaerat accusamus numquam.
-                
+              <div class="container col-md-10 add-margin" id="wykres-wiadomosc-chart-logarytmiczny">
+                <h4> Wykres logarytmiczny napisanych wiadomości </h4>
+                <canvas id="myChart3"></canvas>      
+              </div>
             </section>
           </div>
           <!-- Spied element -->
         </div>
       
-        <div class="col-md-2">
+        <div class="col-md-2 ">
           <!-- Scrollspy -->
-          <div id="scrollspy1" class="sticky-top flex-column sticky-offset" index>
-            <ul class="nav flex-column nav-pills menu-sidebar" data-spy="affix">
+          <div id="scrollspy1" class="sticky-top sticky-offset" index>
+            <ul class="nav flex-column nav-pills menu-sidebar" >
+
               <li class="nav-item">
-                <a class="nav-link" href="#example-1">Section 1</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#example-2">Section 2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#example-3">Section 3</a>
+                <a class="nav-link" href="#podsumowanie">Podsumowanie</a>
                 <ul class="nav flex-column ps-3">
                   <li class="nav-item">
-                    <a class="nav-link" href="#example-sub-A">Subsection A</a>
+                    <a class="nav-link" href="#podsumowanie-tabela">Tabela</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#example-sub-B">Subsection B</a>
+                    <a class="nav-link" href="#wykres-wiadomosc-doughnut">Wykres wiadomości</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#wykres-wiadomosc-chart-logarytmiczny">Wykres logarytniczny</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#example-4">Section 4</a>
+                <a class="nav-link" href="#example-2">Ilość wiadomości w dniu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#example-3">Ilość wiadomości w tygodniu</a>
+                
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#example-4">Ranking emotek</a>
               </li>
             </ul>
           </div>
@@ -329,19 +562,18 @@
       <!-- Section: Social media -->
       <section class="mb-4">
         <!-- Facebook -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-  
- 
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="https://www.facebook.com/" role="button"><i class="fab fa-facebook-f"></i></a>
+   
         <!-- Google -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="https://www.google.com/" role="button"><i class="fab fa-google"></i></a>
   
         <!-- Instagram -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="https://www.instagram.com/" role="button"><i class="fab fa-instagram"></i></a>
   
         <!-- Linkedin -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="https://www.linkedin.com/" role="button"><i class="fab fa-linkedin-in"></i></a>
         <!-- Github -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"><i class="fab fa-github"></i></a>
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="https://github.com/rodakrafal" role="button"><i class="fab fa-github"></i></a>
       </section>
       <!-- Section: Social media -->
   
@@ -371,25 +603,31 @@
   
   </footer>
   <!-- Footer -->
-   
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"></script>    
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <!-- <script type="{{site.baseurl}}/js/scrollspy.js"></script> -->
 
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  
+
+  <script src="../scripts/slizgawkaCharts/messagesAmountChart.js"> </script>
+  <script src="../scripts/slizgawkaCharts/messagesAmountBar.js"> </script>
+  <script src="../scripts/slizgawkaCharts/emojisAmountBar.js"> </script>
+  <script src="../scripts/slizgawkaCharts/messagesFrequencyDay.js"> </script>
+  <script src="../scripts/slizgawkaCharts/messagesFrequencyWeek.js"> </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <script>
-    $('html, body').animate({
-      scrollTop: $(hash).offset(60).top
-    }, 800, function(){
+    var divId;
 
-    // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
+    $('.nav-link').click(function(){    
+      divId = $(this).attr('href');
+      $('html, body').animate({
+        scrollTop: $(divId).offset().top - 60
+      }, 100);
     });
-
+    
   </script>
+
 
 </body>
 </html>

@@ -1,32 +1,20 @@
 let namesAmountMessagesBar = ['Andrzej Domagała',
-    'Piotr Klimont',
-    'Paweł Ostrowski',
-    'Maciej Mikulski',
-    'Adrian Szarek',
-    'Mateusz Barzenc',
-    'Łukasz Szarga',
-    'Krzysztof Kisluk',
-    'Filip Manka',
-    'Andrzej Wiśniewski',
-    'Cezary Serkis',
-    'Mateusz Tchórz',
-    'Rafał Rodak',
-    'Antek Domagała',
-    'Kuba Kryk',
-    'Paweł Jurkowski',
-    'Tomek Wiejak',
-    'Krzysztof Oleszkiewicz',
-    'Piotr Rodziewicz',
-    'Dawid Matraszek',
-    'Andzelika Ksiś',
-    'Radosław Bany',
-    'Kuba Baryłka',
-    'Andrzej Baj',
-    'Michał Kopciał',
-    'Kacper Seredyn',
-    'Cezary Kotowski'];
+'Andrzej Wiśniewski',
+'Mateusz Tchórz',
+'Maciej Mikulski',
+'Kuba Baryłka',
+'Paweł Ostrowski',
+'Łukasz Szarga',
+'Antek Domagała',
+'Tomek Wiejak',
+'Krzysztof Oleszkiewicz',
+'Rafał Rodak',
+'Radosław Bany',
+'Kuba Kryk',
+'Piotr Rodziewicz',
+'Kacper Seredyn'];
 
-let messagesAmoutBar = [76020, 20222, 9308, 7479, 7365, 6798, 4838,4803, 4773, 3793, 3083, 2517, 2491, 2251,1980, 1358, 1156, 1156, 761, 646, 423, 290, 122, 98, 95, 41, 35];
+let messagesAmoutBar = [9139, 2454, 1479, 1287, 896, 887,766, 518,473,466, 155, 81, 64, 23, 3];
 
 
 // const colorScaledataLengthMessangesCountChart = d3.interpolateSinebow;
