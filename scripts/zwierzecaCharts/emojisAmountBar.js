@@ -1,33 +1,29 @@
 let names3000 = ['🥺', '🐶', '😍', '🐷', '❤️', '🤩', '😠', '😢', '🐸', '🐱'];
 
-let inteletualnaTomek_Wiejak = [0, 0, 0, 0, 1, 0, 0, 0, 0, 0];
+let inteletualnaTomek_Wiejak = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 let inteletualnaRafal_Rodak = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let inteletualnaPawel_Ostrowski = [17, 0, 0, 4, 2, 0, 0, 0, 0, 1];
-let inteletualnaAndrzej_Domagala = [140, 0, 0, 0, 0, 3, 3, 0, 1, 1];
-let inteletualnaMateusz_Tchorz = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let inteletualnaRadosław_Bany= [1, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let inteletualnaAntek_Domagała= [1, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let inteletualnaNatalia_Krukar = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 
+let inteletualnaPatrycja_Sonta = [0, 0, 1, 0, 0, 0, 0, 0, 0, 0]; 
+let inteletualnaPawel_Ostrowski =  [1, 5, 0, 3, 6, 0, 0, 1, 1, 0];
+let inteletualnaGabriela_Libudzka = [2, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let inteletualnaAndrzej_Domagala = [1, 19, 22, 12, 3, 11, 0, 3, 2, 0];
+let inteletualnaKarolina_Radomska = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let inteletualnaBlazej_Mioduszewski = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0];
+let inteletualnaMarysia_Gajek = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 
+let inteletualnaAleksandra_Kowalik =  [0, 0, 1, 0, 0, 0, 0, 0, 0, 0];
+let inteletualnaPiotr_Klimont = [24, 0, 2, 4, 6, 0, 8, 0, 0, 0];
+let inteletualnaPaulina_Kuta = [5, 1, 0, 0, 2, 0, 0, 0, 0, 0];
+let inteletualnaMateusz_Barzen = [1, 3, 0, 3, 0, 0, 0, 2, 3, 1];
+let inteletualnaCezary_Serkis =  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let inteletualnaRadosław_Bany= [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 let inteletualnaŁukasz_Szarga = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 let inteletualnaPiotr_Rodziewicz=  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let inteletualnaMaciej_Mikulski= [5, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let inteletualna_Kuba_Baryłka= [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let inteletualnaKuba_Kryk= [3, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let inteletualnaAndrzej_Wiśniewski= [4, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let inteletualnaMateusz_Barzen = [47, 0, 1, 0, 0, 0, 0, 2, 0, 0];
-let inteletualnaPaulina_Kuta = [1, 1, 5, 0, 0, 0, 0, 0, 0, 0];
-let inteletualnaPiotr_Klimont = [1, 6, 0, 0, 0, 0, 0, 0, 1, 0];
-let inteletualnaMarysia_Gajek = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 
-let inteletualnaKrzystof_Kisluk = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 
-let inteletualnaDawid_Matraszek = [2, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 
-let inteletualnaArian_Szarek = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let inteletualnaFilip_Manka = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let inteletualnaPatrycja_Sonta = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 
-let inteletualnaAndrzej_Baj = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let inteletualnaNatalia_Krukar = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 
-let inteletualnaPawel_Marcin_Jurkowski = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 
-let inteletualnaJakub_Bieniek = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let inteletualnaMateusz_Swiderski = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 
-let inteletualnaEliza_Szczotka = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 
+let inteletualnaMaciej_Mikulski= [0, 0, 0, 1, 0, 0, 0, 0, 0, 0];
+let inteletualnaKrzysztof_Oleszkiewicz = [0, 0, 0, 0, 0, 0, 0, 0, 0, 3];
+let inteletualnaFaustyna_Porebska = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let inteletualnaDawid_Matraszek = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0]; 
+let inteletualnaAntek_Domagała= [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
 
 
 let emojisBarChart = document.getElementById("myChart3").getContext('2d');
@@ -58,13 +54,13 @@ let mychart3 = new Chart(emojisBarChart, {
                   backgroundColor: '#1B0C41',
               },
               {
-                  label: 'Mateusz Tchórz',
-                  data: inteletualnaMateusz_Tchorz ,
+                  label: 'Gabriela Libudzka',
+                  data: inteletualnaGabriela_Libudzka ,
                   backgroundColor: '#290B55',
               },
               {
-                  label: 'Andrzej Baj',
-                  data: inteletualnaAndrzej_Baj,
+                  label: 'Karolina Radomska',
+                  data: inteletualnaKarolina_Radomska,
                   backgroundColor: '#3B0964',
               },
               {
@@ -73,13 +69,13 @@ let mychart3 = new Chart(emojisBarChart, {
                   backgroundColor: '#4A0C6B',
               },
               {
-                  label: 'Filip Mańka',
-                  data: inteletualnaFilip_Manka,
+                  label: 'Błażej Mioduszewski',
+                  data: inteletualnaBlazej_Mioduszewski,
                   backgroundColor: '#5A116E',
               },
               {
-                  label: 'Adrian Szarek',
-                  data: inteletualnaArian_Szarek ,
+                  label: 'Łukasz Szarga',
+                  data: inteletualnaŁukasz_Szarga ,
                   backgroundColor: '#69166E',
               },
               {
@@ -103,8 +99,8 @@ let mychart3 = new Chart(emojisBarChart, {
                   backgroundColor: '#A52C60',
               },
               {
-                  label: 'Łukasz Szarga',
-                  data: inteletualnaŁukasz_Szarga,
+                  label: 'Krzysztof Oleszkiewicz',
+                  data: inteletualnaKrzysztof_Oleszkiewicz,
                   backgroundColor: '#B43359',
               },
               {
@@ -118,8 +114,8 @@ let mychart3 = new Chart(emojisBarChart, {
                   backgroundColor: '#CF4446',
               },
               {
-                  label: 'Kuba Baryłka',
-                  data: inteletualna_Kuba_Baryłka,
+                  label: 'Faustyna Porębska',
+                  data: inteletualnaFaustyna_Porebska,
                   backgroundColor: '#DA4E3C',
               },
               {
@@ -128,54 +124,19 @@ let mychart3 = new Chart(emojisBarChart, {
                   backgroundColor: '#E55C30',
               },
               {
-                  label: 'Kuba Kryk',
-                  data: inteletualnaKuba_Kryk,
+                  label: 'Cezary Serkis',
+                  data: inteletualnaCezary_Serkis,
                   backgroundColor: '#ED6925',
-              },
-              {
-                  label: 'Paweł Jurkowski',
-                  data: inteletualnaPawel_Marcin_Jurkowski,
-                  backgroundColor: '#F47918',
               },
               {
                   label: 'Dawid Matraszek',
                   data: inteletualnaDawid_Matraszek,
-                  backgroundColor: '#F8890C',
+                  backgroundColor: '#F47918',
               },
               {
-                  label: 'Krzysztof Kiśluk',
-                  data: inteletualnaKrzystof_Kisluk,
-                  backgroundColor: '#FB9B06',
-              },
-              {
-                  label: 'Andrzej Wiśniewski',
-                  data: inteletualnaAndrzej_Wiśniewski,
-                  backgroundColor: '#FCAC11',
-              },
-              {
-                  label: 'Natalia Krukar',
-                  data: inteletualnaNatalia_Krukar,
-                  backgroundColor: '#FAC026',
-              },
-              {
-                  label: 'Jakub Bieniek',
-                  data: inteletualnaJakub_Bieniek,
-                  backgroundColor: '#F3E55D',
-              },
-              {
-                  label: 'Mateusz Świderski',
-                  data: inteletualnaMateusz_Swiderski,
-                  backgroundColor: '#F2F482',
-              },
-              {
-                label: 'Eliza Szczotka',
-                data: inteletualnaEliza_Szczotka,
-                backgroundColor: '#F2F482',
-              },
-              {
-                  label: "Patrycja Sońta",
+                  label: 'Patrycja Sońta',
                   data: inteletualnaPatrycja_Sonta,
-                  backgroundColor: '#F1F468',
+                  backgroundColor: '#F8890C',
               }
           ]
         

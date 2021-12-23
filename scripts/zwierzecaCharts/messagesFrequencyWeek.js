@@ -1,6 +1,6 @@
 var intelektualnaWeek = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"];
 
-var intelektualnaMessangesAmountInWeek = [1776, 1370, 775, 1522, 1383, 2353, 1898];
+var intelektualnaMessangesAmountInWeek = [910, 528, 514, 769, 630, 540, 883];
 
 // const intelektualnaFrequencyWeekColorGradient = d3.interpolateSinebow;
 const intelektualnaFrequencyWeekColorGradient = d3.interpolateInferno;

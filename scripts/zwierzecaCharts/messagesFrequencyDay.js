@@ -1,7 +1,6 @@
-var intelektualnaHoursInDay = [7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,1,2,3,4,5,6];
+var intelektualnaHoursInDay = [6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,1,2,3,4,5];
 
-var intelektualnaMessangesAmountInDay = [0, 17, 41, 105, 224, 358, 735, 445, 463, 757, 400, 608, 363, 285, 601, 524, 1017, 1495,1835, 668, 120, 16, 0, 0]
-
+var intelektualnaMessangesAmountInDay = [4, 4, 15, 60, 106, 185, 280, 390, 249, 241, 220, 303, 254, 236, 305, 252, 337, 447, 363,401, 84, 19, 19, 0];
 // const intelektualnaFrequencyColorGradient = d3.interpolateSinebow;
 const intelektualnaFrequencyColorGradient = d3.interpolateInferno;
 const intelektualnaFrequencyColorStats = {

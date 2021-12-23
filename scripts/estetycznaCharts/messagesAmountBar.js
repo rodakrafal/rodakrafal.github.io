@@ -25,7 +25,7 @@ let namesAmountMessagesBar = ['Andrzej Domagała',
 'Jakub Bieniek',
 'Kuba Baryłka',
 'Mateusz Świderski',
-'Eliza Szczotka',];
+'Eliza Szczotka'];
 
 let messagesAmoutBar = [4207,
     2696,
