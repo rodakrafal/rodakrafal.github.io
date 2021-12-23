@@ -1,6 +1,6 @@
-var intelektualnaHoursInDay = [5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,1,2,3,4];
+var intelektualnaHoursInDay = [6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,1,2,3,4,5];
 
-var intelektualnaMessangesAmountInDay = [26, 91, 404, 1659, 3987, 6734, 9769, 10866, 10058, 10503, 9595, 9400, 9221, 8831, 9465, 10358, 11275, 12894, 14564,9195, 3010, 1270, 362, 56];
+var intelektualnaMessangesAmountInDay = [18, 26, 77, 309, 714, 976, 1080, 986, 1067, 963, 952, 986, 1125, 1146, 1313, 1653, 1594, 1502, 1314,574, 182, 50, 38, 48]
 
 
 // const intelektualnaFrequencyColorGradient = d3.interpolateSinebow;

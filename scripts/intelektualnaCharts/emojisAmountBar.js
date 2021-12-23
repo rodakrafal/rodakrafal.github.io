@@ -128,11 +128,6 @@ let mychart3 = new Chart(emojisBarChart, {
                 backgroundColor: '#E55C30',
             },
             {
-                label: 'Krzysztof Oleszkiewicz',
-                data: inteletualnaKrzysztof_Oleszkiewicz,
-                backgroundColor: '#E55C30',
-            },
-            {
                 label: 'Kuba Kryk',
                 data: inteletualnaKuba_Kryk,
                 backgroundColor: '#ED6925',
